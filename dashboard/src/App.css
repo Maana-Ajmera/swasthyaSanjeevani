@@ -7,7 +7,7 @@
   font-family: "Montserrat", sans-serif;
 }
 body {
-  background: #3939d9f2;
+  background: #1e3a8a;
 }
 .container {
   padding: 0 100px;
@@ -38,7 +38,7 @@ body {
 }
 @media (max-width: 460px) {
   .logo {
-    width: 100%;
+    width: 20%;
   }
 }
 .form-title {
@@ -85,7 +85,7 @@ body {
 .form-component p:first-child {
   font-size: 28px;
   font-weight: 700;
-  color: #370080a3;
+  color: #1e3a8a;
   margin-top: 30px;
 }
 .form-component form div {
@@ -110,7 +110,7 @@ body {
   border-radius: 8px;
   font-size: 24px;
   margin-bottom: 30px;
-  background: linear-gradient(140deg, #9083d5, #271776ca);
+  background: linear-gradient(140deg, #1e3a8a, #271776ca);
 }
 .form-component .wrapper {
   display: flex;
@@ -170,7 +170,7 @@ body {
   display: flex;
   align-items: center;
   border-radius: 20px;
-  background: #b5b5ff;
+  background: #e1a448;
   padding: 20px 20px 0 10px;
 }
 .dashboard .banner:first-child .firstBox img {
@@ -197,7 +197,7 @@ body {
   font-size: 16px;
 }
 .dashboard .banner:first-child .secondBox {
-  background: #3939d9f2;
+  background: #1e3a8a;
   color: #fff;
 }
 .dashboard .banner:first-child .thirdBox {
@@ -360,7 +360,7 @@ body {
 }
 .sidebar svg:hover {
   background: #fff;
-  color: #3939d9f2;
+  color: #1e3a8a;
   border-radius: 8px;
   transition: 0.3s;
   cursor: pointer;
@@ -379,7 +379,7 @@ body {
 
 @media (max-width: 1208px) {
   .sidebar {
-    background: #3939d9f2;
+    background: #1e3a8a;
     left: -100%;
     transition: 0.3s;
   }
@@ -393,7 +393,7 @@ body {
     top: 30px;
     left: 40px;
     font-size: 34px;
-    background: #3939d9f2;
+    background: #1e3a8a;
     color: #fff;
     height: 40px;
     width: 40px;
@@ -416,7 +416,7 @@ body {
 }
 
 .doctors h1 {
-  color: #3939d9f2;
+  color: #1e3a8a;
   margin-bottom: 30px;
   font-size: 2.3rem;
 }
@@ -467,7 +467,7 @@ body {
 }
 
 .messages h1 {
-  color: #3939d9f2;
+  color: #1e3a8a;
   margin-bottom: 30px;
   font-size: 2.3rem;
 }
@@ -487,6 +487,9 @@ body {
   flex-direction: column;
   gap: 8px;
   font-size: 20px;
+}
+img .logo {
+  height: 30vw;
 }
 .messages .banner .card div p {
   font-weight: 700;
@@ -573,4 +576,64 @@ input[type="time"]:before {
   content: attr(placeholder);
   color: #444;
   margin-right: 0.5em;
+}
+/* src/Inventory.css */
+
+.page.inventory {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.inventory-list {
+  display: block;
+
+  justify-content: center;
+  gap: 20px;
+}
+
+.inventory-card {
+  background-color: white;
+  border: 2px solid #007bff;
+  border-radius: 10px;
+
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.inventory-card:hover {
+  transform: translateY(-5px);
+}
+
+.inventory-card h4 {
+  font-size: 1.5em;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.inventory-card p {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.low-quantity {
+  background-color: #ffe6e6;
+  border-color: #ff4d4d;
+}
+
+.low-quantity h4,
+.low-quantity p {
+  color: #ff4d4d;
+}
+img {
+  height: 30vh;
 }

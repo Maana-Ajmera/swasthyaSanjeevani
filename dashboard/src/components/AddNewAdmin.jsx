@@ -55,7 +55,7 @@ const AddNewAdmin = () => {
   return (
     <section className="page">
       <section className="container form-component add-admin-form">
-        <h1 className="form-title">Swasthya Sanjeevani</h1>
+        <img src="/logo.png" alt="logo" className="" />
         <h1 className="form-title">ADD NEW ADMIN</h1>
         <form onSubmit={handleAddNewAdmin}>
           <div>

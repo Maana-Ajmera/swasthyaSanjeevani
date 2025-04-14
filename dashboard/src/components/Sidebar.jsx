@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import { Context } from "../main";
 import { TiHome } from "react-icons/ti";
 import { RiLogoutBoxFill } from "react-icons/ri";
 import { AiFillMessage } from "react-icons/ai";
@@ -9,15 +8,22 @@ import { MdAddModerator } from "react-icons/md";
 import { IoPersonAddSharp } from "react-icons/io5";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { Context } from "../main";
 import { useNavigate } from "react-router-dom";
+
 const Sidebar = () => {
   const [show, setShow] = useState(false);
+
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+
   const handleLogout = async () => {
     await axios
-      .get("https://swasthya-sanjeevani.onrender.com/api/v1/user/admin/logout", {
-        withCredentials: true,
-      })
+      .get(
+        "https://swasthya-sanjeevani.onrender.com/api/v1/user/admin/logout",
+        {
+          withCredentials: true,
+        }
+      )
       .then((res) => {
         toast.success(res.data.message);
         setIsAuthenticated(false);
@@ -34,7 +40,7 @@ const Sidebar = () => {
     setShow(!show);
   };
   const gotoDoctorsPage = () => {
-    navigateTo("/doctors");
+    navigateTo("/inventory");
     setShow(!show);
   };
   const gotoMessagesPage = () => {
@@ -49,8 +55,9 @@ const Sidebar = () => {
     navigateTo("/admin/addnew");
     setShow(!show);
   };
+
   return (
-    <div>
+    <>
       <nav
         style={!isAuthenticated ? { display: "none" } : { display: "flex" }}
         className={show ? "show sidebar" : "sidebar"}
@@ -65,12 +72,12 @@ const Sidebar = () => {
         </div>
       </nav>
       <div
-        style={isAuthenticated ? { display: "none" } : { display: "flex" }}
         className="wrapper"
+        style={!isAuthenticated ? { display: "none" } : { display: "flex" }}
       >
-        <GiHamburgerMenu onClick={() => setShow(!show)} />
+        <GiHamburgerMenu className="hamburger" onClick={() => setShow(!show)} />
       </div>
-    </div>
+    </>
   );
 };
 

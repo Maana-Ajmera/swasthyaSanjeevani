@@ -8,7 +8,9 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
+
   const navigateTo = useNavigate();
 
   const handleLogin = async (e) => {
@@ -39,10 +41,12 @@ const Login = () => {
   if (isAuthenticated) {
     return <Navigate to={"/"} />;
   }
+
   return (
     <>
       <section className="container form-component">
-        <h1 className="form-title">WELCOME TO SWASTHYASANJEEVANI</h1>
+        <img src="/logo.png" alt="logo" className="logo" />
+        <h1 className="form-title">WELCOME TO SWASTHYA SANJEEVANI</h1>
         <p>Only Admins Are Allowed To Access These Resources!</p>
         <form onSubmit={handleLogin}>
           <input

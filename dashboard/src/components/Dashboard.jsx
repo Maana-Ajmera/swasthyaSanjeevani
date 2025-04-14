@@ -54,16 +54,16 @@ const Dashboard = () => {
       <section className="dashboard page">
         <div className="banner">
           <div className="firstBox">
-            <img src="/doc.png" alt="docImg" />
+            <img src="/logo.png" alt="docImg" />
             <div className="content">
               <div>
-                <p>Hello ,</p>
-                <h5>{admin && `${admin.firstName} ${admin.lastName}`} </h5>
+                <p>Swasthya Sanjeevani</p>
               </div>
               <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Facilis, nam molestias. Eaque molestiae ipsam commodi neque.
-                Assumenda repellendus necessitatibus itaque.
+                Swasthya Sanjeevani is a healthcare management platform aimed at
+                optimizing OPD queuing, bed availability, patient admissions,
+                and inventory management in hospitals. It provides a seamless
+                solution that integrates with city-wide healthcare systems.
               </p>
             </div>
           </div>
