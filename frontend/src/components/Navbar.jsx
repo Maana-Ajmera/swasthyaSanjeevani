@@ -12,7 +12,7 @@ const Navbar = () => {
   const { isAuthenticated, setIsAuthenticated } = useContext(Context);
   const handleLogout = async () => {
     await axios
-      .get("http://localhost:4000/api/v1/user/patient/logout", {
+      .get("https://swasthya-sanjeevani.onrender.com/api/v1/user/patient/logout", {
         withCredentials: true,
       })
       .then((res) => {
